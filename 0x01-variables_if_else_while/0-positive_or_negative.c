@@ -3,7 +3,8 @@
 #include <stdio.h>
 /* more headers goes there */
 
-/** main - Entry point
+/**
+ * main - Entry point
  * this program print positive and negative values of a named variable
  *
  * Return: Always (0) Sucess
@@ -17,17 +18,17 @@ int main(void)
 	/* your code goes there */
 
 	/*if statement to print out different output based on diff condition*/
-	if(n > 0)
+	if (n > 0)
 	{
-		printf ("%d is positive\n", n);
+		printf("%d is positive\n", n);
 	}
-	else if(n == 0)
+	else if (n == 0)
 	{
-		printf ("%d is zero\n", n);
+		printf("%d is zero\n", n);
 	}
 	else
 	{
-		printf ("%d is negative\n", n);
+		printf("%d is negative\n", n);
 	}
 
 	return (0);
