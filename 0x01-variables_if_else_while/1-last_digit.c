@@ -5,7 +5,8 @@
 
 /**
  * main - Entry point
- * This function call the if and else function to print out string based on specific conditions
+ * This function call the if and else function to print out
+ * string based on specific conditions
  *
  * Return: Always (0) Sucess
  */
