@@ -4,7 +4,7 @@
 /**
  * main - Entry point
  * a program that prints single digit of base 10
- * 
+ *
  * Return: Always (0) Success
  */
 int main(void)
