@@ -8,7 +8,7 @@
  * Return: (0) success
  */
 
-int main()
+int main(void)
 {
 	int count;
 
@@ -36,4 +36,6 @@ int main()
 		count++;
 	}
 	printf("\n");
+
+	return (0);
 }
