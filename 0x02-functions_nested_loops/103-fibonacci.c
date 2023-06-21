@@ -10,11 +10,10 @@
 
 int main(void)
 {
-	long int count, sum, limit;
+	long int sum, limit;
 
 	long int num1, num2, next;
 
-	count = 3;
 	num1 = 1;
 	num2 = 2;
 	sum = num2;
