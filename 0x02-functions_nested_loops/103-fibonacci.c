@@ -33,7 +33,8 @@ int main(void)
 
 		next = num1 + num2;
 	}
-	printf("%lu \n", sum);
+	printf("%lu", sum);
+	printf("\n");
 
 	return (0);
 }
