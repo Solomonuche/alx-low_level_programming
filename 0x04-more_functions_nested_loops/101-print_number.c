@@ -2,21 +2,13 @@
 
 /**
  * print_number - a function that prints integer using putchar function
+ * @n: input parameter
  *
  * Return: (0) success
  */
 
 void print_number(int n)
 {
-	/* for integers less than 0 */
-
-/*	if (n < 0)
-	{
-		_putchar('-');
-		n = -n;
-		_putchar('0' + n);
-	}*/
-
 	/* for 0 integer */
 
 	if (n == 0)
