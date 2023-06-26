@@ -26,9 +26,15 @@ void print_number(int n)
 
 	/* for integer greater than zero */
 
-	if (n > 0)
+	if (n > 0 || n < 0)
 	{
 		int reserve = 0;
+
+		if (n < 0)
+		{
+			_putchar('-');
+			n = -n;
+		}
 
 		while (n > 0)
 		{
