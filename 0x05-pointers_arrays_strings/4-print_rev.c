@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * _puts - a function that prints a string, followed by a new line, to stdout
- * @str: pionter varaible
+ * print_rev - a function that prints a string, in reverse,
+ * followed by a new line.
+ * @s: pionter varaible
  *
  * Return: (0) success
  */
@@ -17,9 +18,8 @@ void print_rev(char *s)
 		length++;
 	}
 
-	for (i = length - 1; i >=0; i--)
+	for (i = length - 1; i >= 0; i--)
 		_putchar(s[i]);
 
 	_putchar('\n');
-		
 }
