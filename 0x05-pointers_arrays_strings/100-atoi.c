@@ -14,14 +14,19 @@ int _atoi(char *s)
 	int holder = 0;
 	int result = 0;
 
-	if (s[0] == '-')
+	for (; s[i] == ' '; i++)
+	{
+		/* skipping whitespace */
+	}
+
+	if (s[i] == '-')
 	{
 		sign = -1;
-		i = 1;
+		i++;
 	}
-	else if (s[0] == '+')
+	else if (s[i] == '+')
 	{
-		i = 1;
+		i++;
 	}
 
 	for (; s[i] != '\0'; i++)
