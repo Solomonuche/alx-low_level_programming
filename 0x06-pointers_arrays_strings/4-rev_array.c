@@ -3,6 +3,7 @@
 /**
  * reverse_array - a function that reverses the content of an array of integers
  * @n: number of elemets of the array
+ * @a: pointer variable
  *
  * Return: (0) success
  */
@@ -17,5 +18,4 @@ void reverse_array(int *a, int n)
 		a[i] = a[n - 1 - i];
 		a[n - 1 - i] = temp;
 	}
-		
 }
