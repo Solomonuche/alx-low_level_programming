@@ -2,8 +2,8 @@
 
 /**
  * rot13 - a function that encodes a tring using Rot13
- * @str: input string
- * 
+ * @s: input string
+ *
  * Return: (str)
  */
 
