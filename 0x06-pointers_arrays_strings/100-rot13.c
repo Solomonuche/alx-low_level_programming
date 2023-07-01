@@ -9,27 +9,23 @@
 
 char *rot13(char *s)
 {
-	int i;
-	char *p = s;
+	char let1[] = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ";
+	char let2[] = "nNoOpPqQrRsStTuUvVwWxXyYzZaAbBcCdDeEfFgGhHiIjJkKlLmM";
 
-	for (i = 0; p[i] != '\0'; i++)
+	int i;
+	int j;
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
 
-		if ((p[i] >= 'A' && p[i] <= 'M') || (p[i] >= 'a' && p[i] <= 'm'))
+		for (j = 0; let1[j] != '\0'; j++)
 		{
-			p[i] = p[i] + 13;
+			if (s[i] == let1[j])
+			{
+				s[i] = let2[j];
+				break;
+			}
 		}
-		else if ((p[i] >= 'N' && p[i] <= 'Z') || (p[i] >= 'n' && p[i] <= 'z'))
-		{
-			p[i] = p[i] - 13;
-		}
-		else
-		{
-			p[i] = p[i];
-		}
-
 	}
-	p[i] = '\0';
-
 	return (s);
 }
