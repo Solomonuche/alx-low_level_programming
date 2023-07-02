@@ -28,7 +28,7 @@ void print_number(int n)
 		{
 			res = (res * 10) + (n % 10);
 			n = n / 10;
-		}    
+		}
 		for (i = 0; res > 0; i++)
 		{
 			_putchar('0' + (res % 10));
