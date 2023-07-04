@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strstr - a function that gets the length of a prefix substring
+ * _strstr - a function that locates a substring.
  * @haystack: string
  * @needle: substring
  *
