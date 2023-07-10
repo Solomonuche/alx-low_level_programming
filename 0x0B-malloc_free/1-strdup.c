@@ -29,5 +29,6 @@ char *_strdup(char *str)
 		ptr[len] = '\0';
 	}
 
+	return (0);
 	return (ptr);
 }
