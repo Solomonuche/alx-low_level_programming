@@ -1,5 +1,5 @@
 #include "dog.h"
-
+#include <stdio.h>
 /**
  * init_dog - a function that initialize a varaible of type struct dog
  * @d: struct dog variable
@@ -7,7 +7,7 @@
  * @age: second member
  * @owner: third member
  *
- * Return: (0)
+ * Return: (NULL)
  */
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
