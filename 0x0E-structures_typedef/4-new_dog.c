@@ -1,5 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
+dog_t *new_dog(char *name, float age, char *owner);
 /**
  * new_dog - a function that initialize a varaible of type struct dog
  * @name: first member
@@ -8,12 +9,10 @@
  *
  * Return: (NULL)
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	char *namecpy, *ownercpy;
-	int i;
-	int len1 = 0, len2 = 0;
+	int i, len1 = 0, len2 = 0;
 	dog_t *ndog;
 
 	ndog = malloc(sizeof(dog_t));
