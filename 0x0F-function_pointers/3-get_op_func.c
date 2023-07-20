@@ -1,9 +1,8 @@
 #include "3-calc.h"
 #include <stdlib.h>
-
-
 /**
- * get_op_func - a function that compare the operator passed and returns a funtion pointer
+ * get_op_func - a function that compare the operator
+ * passed and returns a funtion pointer
  * @s: operator
  *
  * Return: (op_func)
