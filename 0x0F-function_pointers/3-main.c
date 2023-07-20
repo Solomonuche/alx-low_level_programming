@@ -12,8 +12,8 @@
 
 int main(int argc, char *argv[])
 {
-	int num1, num2, result;
-	int (*fptr)(int a, int b);
+	int num1, num2;
+	int (*fptr)(int, int);
 
 	if (argc != 4)
 	{
@@ -29,8 +29,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	result = fptr(num1, num2);
-	printf("%d\n", result);
+	printf("%d\n", fptr(num1, num2));
 
 	return (0);
 }
