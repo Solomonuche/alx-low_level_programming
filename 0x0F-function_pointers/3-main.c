@@ -6,7 +6,7 @@
  * main - entry point
  * @argc: argument count
  * @argv: argument vector
- *
+ * 
  * Return: (int)
  */
 
