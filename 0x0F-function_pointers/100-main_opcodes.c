@@ -13,7 +13,6 @@ int main(int argc, char *argv[])
 {
 	int i;
 	int num_bytes = atoi(argv[1]);
-	int (*main_ptr)(int, char *[]);
 	char *opcodes;
 
 	if (argc != 2)
@@ -28,9 +27,7 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	main_ptr = main;
-
-	opcodes = (char *)main_ptr;
+	opcodes = (char *)main;
 	for (i = 0; i < num_bytes; i++)
 	{
 		if (i == num_bytes - 1)
