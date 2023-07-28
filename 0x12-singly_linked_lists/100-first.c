@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * print_b4_main - a function that executes automatically before main functio
+ * print_auto - a function that executes automatically before main functio
  *
  * Return: (nothing)
  */
