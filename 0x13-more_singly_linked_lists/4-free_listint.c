@@ -13,7 +13,7 @@ void free_listint(listint_t *head)
 {
 	struct listint_s *prev_node, *temp;
 
-	pre_node = temp = head;
+	prev_node = temp = head;
 
 	if (head == NULL)
 	{
@@ -21,8 +21,8 @@ void free_listint(listint_t *head)
 	}
 	while (temp != NULL)
 	{
-		free(pre_node);
 		temp = temp->next;
+		free(prev_node);
 		prev_node = temp;
 	}
 }
