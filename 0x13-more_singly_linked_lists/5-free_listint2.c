@@ -14,7 +14,7 @@ void free_listint2(listint_t **head)
 
 	struct listint_s *prev_node, *temp;
 
-	prev_node = temp = head;
+	prev_node = temp = *head;
 
 	if (head == NULL)
 		return;
