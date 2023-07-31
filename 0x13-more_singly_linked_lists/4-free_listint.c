@@ -15,10 +15,6 @@ void free_listint(listint_t *head)
 
 	prev_node = temp = head;
 
-	if (head == NULL)
-	{
-		return (NULL);
-	}
 	while (temp != NULL)
 	{
 		temp = temp->next;
