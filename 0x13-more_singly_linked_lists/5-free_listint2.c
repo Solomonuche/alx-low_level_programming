@@ -14,7 +14,7 @@ void free_listint2(listint_t **head)
 	struct listint_s *temp;
 
 
-	while (temp != NULL)
+	while (*head != NULL)
 	{
 
 		temp = *head;
