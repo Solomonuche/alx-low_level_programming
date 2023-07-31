@@ -13,7 +13,8 @@ void free_listint2(listint_t **head)
 {
 	struct listint_s *temp;
 
-
+	if (head == NULL)
+		return;
 	while (*head != NULL)
 	{
 
