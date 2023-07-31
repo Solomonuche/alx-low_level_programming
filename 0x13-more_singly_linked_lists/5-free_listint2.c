@@ -13,11 +13,11 @@ void free_listint2(listint_t **head)
 {
 	struct listint_s *temp;
 
-	temp = *head;
 
 	while (temp != NULL)
 	{
 
+		temp = *head;
 		free(*head);
 		*head = temp->next;
 	}
