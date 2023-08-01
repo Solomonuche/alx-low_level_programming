@@ -12,7 +12,7 @@
 void free_listint2(listint_t **head)
 {
 
-	struct listint_s *temp;
+	struct listint_s *currentnode;
 
 	if (head == NULL)
 		return;
