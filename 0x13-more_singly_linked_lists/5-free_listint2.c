@@ -12,7 +12,7 @@
 void free_listint2(listint_t **head)
 {
 
-	struct listint_s *temp;
+	struct listint_s *temp, *nxtnode;
 
 	temp = *head;
 
@@ -20,8 +20,9 @@ void free_listint2(listint_t **head)
 		return;
 	while (temp != NULL)
 	{
+		nxtnode = temp->next;
 		free(temp);
-		temp = (*head)->next;
+		temp = nxtnode;
 	}
 	*head = NULL;
 }
