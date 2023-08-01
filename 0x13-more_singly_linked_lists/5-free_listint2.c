@@ -12,18 +12,16 @@
 void free_listint2(listint_t **head)
 {
 
-	struct listint_s *prev_node, *temp;
+	struct listint_s *temp;
 
-	prev_node = temp = *head;
+	temp = *head;
 
 	if (*head == NULL)
 		return;
 	while (temp != NULL)
 	{
-		prev_node = temp = *head;
-		temp = temp->next;
-		free(prev_node);
-		prev_node = temp;
+		free(temp);
+		temp = (*head)->next;
 	}
 	*head = NULL;
 }
