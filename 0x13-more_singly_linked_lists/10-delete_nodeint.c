@@ -6,8 +6,7 @@
  * delete_nodeint_at_index - a function that deletes
  * a node at index of a linked list
  * @head: linked list
- * @idx: nth node
- * @n: struct member
+ * @index: nth node
  *
  * Return: (nth node)
  */
@@ -17,7 +16,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	unsigned int i = 0;
 	struct listint_s *temp = *head, *curentnode, *nxtnode;
 
-	if (head == NULL)
+	if (*head == NULL)
 		return (-1);
 
 	while (i < index - 1 && temp != NULL)
@@ -33,7 +32,9 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	if (index == 0)
 	{
+		temp = temp->next;
 		free(*head);
+		*head = temp;
 	}
 	else
 	{
