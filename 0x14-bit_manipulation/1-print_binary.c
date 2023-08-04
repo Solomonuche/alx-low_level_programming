@@ -11,30 +11,11 @@
 
 void print_binary(unsigned long int n)
 {
-	int i, bitmask;
+	int mask = 1;
 
-	if (n == 0)
+	if (n > 1)
 	{
-		putchar('0');
-		return;
+		print_binary(n >> 1);
 	}
-	if (n == 1)
-	{
-		putchar('1');
-		return;
-	}
-	for (i = 31; i >= 0; i--)
-	{
-
-		bitmask = (1 << i);
-
-		if (n & bitmask)
-		{
-			putchar('1');
-		}
-		else
-		{
-			putchar('0');
-		}
-	}
+	_putchar((n & mask) + '0');
 }
