@@ -12,7 +12,7 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int fd, i, nb_written;
+	int fd, len = 0, i, nb_written;
 
 	if (filename == NULL)
 		return (-1);
@@ -25,7 +25,9 @@ int create_file(const char *filename, char *text_content)
 	{
 		for (i = 0; text_content[i] != '\0'; i++)
 		{
-			nb_written = write(fd, &text_content[i], i);
+			len++;
+		}
+		nb_written = write(fd, text_content, len);
 			if (nb_written == -1)
 			{
 				close(fd);
