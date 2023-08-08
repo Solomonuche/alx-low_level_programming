@@ -36,8 +36,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	nb_read = read(fdsrc, buff, 1024);
-	while (nb_read > 0)
+	while ((nb_read = read(fdsrc, buff, 1024)) > 0)
 	{
 		nb_written = write(fddest, buff, nb_read);
 		if (nb_written == -1)
