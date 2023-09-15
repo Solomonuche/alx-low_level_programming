@@ -3,7 +3,7 @@
 /**
  * add_dnodeint - a function that adds a new node at the
  * beginning of a dlistint_t list
- * @h: head nodes to the list
+ * @head: head node
  * @n: struct member
  *
  * Return: address of the new node
