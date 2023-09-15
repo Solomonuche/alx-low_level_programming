@@ -1,25 +1,28 @@
 #include "lists.h"
+
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
+
 /**
  * insert_dnodeint_at_index - a function that insert node at index
  * @h: head node
- * @idx: index
- * @n: struct member n
+ * @idx: list index
+ * @n: list element
  *
  * Return: return new node or NULL
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *tmp, *new;
-	unsigned int dex = 1;
+	dlistint_t *temp = *h, *new;
+	unsigned int i = 1;
 
-	tmp = *h;
-	new = malloc(sizeof(dlistint_t));
+	new = malloc(sizeof(*new));
 	if (new == NULL)
 		return (NULL);
 	new->n = n;
 	new->prev = NULL;
 	new->next = NULL;
-	if ((*h) == NULL)
+
+	if (*h) == NULL)
 	{
 		if (idx == 0)
 		{
@@ -35,18 +38,18 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = new;
 		return (new);
 	}
-	while (tmp->next != NULL && dex != idx)
+	while (temp->next != NULL && i < idx)
 	{
-		tmp = tmp->next;
-		dex++;
+		temp = temp->next;
+		i++;
 	}
-	if (dex == idx)
+	if (i == idx)
 	{
-		new->prev = tmp;
-		new->next = tmp->next;
-		if (tmp->next != NULL)
-			tmp->next->prev = new;
-		tmp->next = new;
+		new->prev = temp;
+		new->next = temp->next;
+		if (temp->next != NULL)
+			temp->next->prev = new;
+		temp->next = new;
 		return (new);
 	}
 	return (NULL);
