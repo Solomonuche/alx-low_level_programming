@@ -20,11 +20,11 @@ def island_perimeter(grid):
     water around the island).
     """
 
-    j = 1
     result = 0
 
     for i in grid:
-        if j in i:
-            result += 4
+        for j in i:
+            if j == 1:
+                result += 1
 
-    return result
+    return (result + 1) * 2
