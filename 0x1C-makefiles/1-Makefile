@@ -1,8 +1,8 @@
 # Makefile
 #
 #variables
-CC := gcc
-SRC := $(wildcard *.c)
+CC = gcc
+SRC = $(wildcard *.c)
 
 #rule
 all:
