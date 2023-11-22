@@ -2,7 +2,7 @@
 #
 #variables
 CC = gcc
-SRC = $(wildcard *.c)
+SRC = main.c school.c
 
 #rule
 all:
