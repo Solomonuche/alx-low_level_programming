@@ -1,4 +1,2 @@
-# Make file
-
 all:
 	gcc $(wildcard *.c) -o school
