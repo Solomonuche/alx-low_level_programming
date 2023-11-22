@@ -21,10 +21,15 @@ def island_perimeter(grid):
     """
 
     result = 0
+    status = 0
 
     for i in grid:
         for j in i:
             if j == 1:
                 result += 1
+                status = 1
 
-    return (result + 1) * 2
+    if status:
+        return (result + 1) * 2
+    else:
+        return result
